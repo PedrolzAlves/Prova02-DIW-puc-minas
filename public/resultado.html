@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br" data-bs-theme="light">
+    <head>
+        <title>Resultado</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS v5.3.8 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+
+        <style>
+            .navbar .navbar-nav .nav-link {
+                color: gray;
+            }
+
+            .navbar .navbar-nav .nav-link.active {
+                background-color: rgb(255, 255, 146);
+                color: #5c3a21;
+            }
+        </style>
+    </head>
+
+    <body class="d-flex flex-column min-vh-100" style="background-color: #6d4528;">
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark navbar-toggle" style="background-color: #362213;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="index.html">
+                        <img src="img/logo-fazenda.jpg" alt="" width="50" height="40" class="rounded"><span style="color :rgb(255, 255, 146)">Votação 2026</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav ms-auto nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="votacao.html">Votação</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="resultado.html">Resultado</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container flex-grow-1">
+            <div class="my-4">
+                <h1 style="color: rgb(255, 255, 146);">Parcial da eliminação</h1>
+                <p class="mb-0" style="color: #d9c7a8;">
+                    <span id="total" class="display-6 fw-bold" style="color: rgb(255, 255, 146);">0</span> votos computados
+                </p>
+            </div>
+
+            <div id="sem-votos" class="card border-0 text-center d-none" style="background-color: #f5e6c4;">
+                <div class="card-body py-4">
+                    <p class="fs-5">Nenhum voto ainda. Escolha quem sai da roça para ver a parcial.</p>
+                    <a href="votacao.html" class="btn btn-danger btn-lg">Ir para a votação</a>
+                </div>
+            </div>
+
+            <div id="placar"></div>
+
+            <button id="btn-zerar" class="btn btn-outline-light mt-2 mb-5 d-none" onclick="zerar()">Zerar votação</button>
+        </main>
+        <footer class="text-center py-3" style="background-color: #362213; color: #d9c7a8;">
+            <small>DIAW 2026, PUC Minas</small>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/api.js"></script>
+        <script src="js/resultado.js"></script>
+    </body>
+</html>
